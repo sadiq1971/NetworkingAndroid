@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Networking Android</string>
+    <string name="button_send">Get</string>
+</resources>
