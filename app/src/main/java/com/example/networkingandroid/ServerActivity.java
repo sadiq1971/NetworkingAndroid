@@ -25,15 +25,20 @@ public class ServerActivity extends AppCompatActivity {
 
         //Initiate request
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://toro-labs.com";
+        String url = "http://appestimator.herokuapp.com/api/6";
 
         //Request a string response from the provided URL
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                 new Response.Listener<String>() {
                     @Override
+                    //public void onResponse(String response){
+                        //Display the first 500 characters of the response string.
+                        //mTextView.setText("Response is: " + response.substring(0,500));
+                    //}
+                    //use following for plain text http responses 
                     public void onResponse(String response){
                         //Display the first 500 characters of the response string.
-                        mTextView.setText("Response is: " + response.substring(0,500));
+                        mTextView.setText("Response is: " + response);
                     }
                 }, new Response.ErrorListener() {
                     @Override
